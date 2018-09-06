@@ -27,6 +27,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define MASTER_RIGHT
 
+#ifdef DIODE_DIRECTION
+#undef DIODE_DIRECTION
+#endif
+
+#define DIODE_DIRECTION ROW2COL
+
 #undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 14
@@ -36,3 +42,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LSPO_KEY KC_8
 #define RSPC_KEY KC_9
+
+
