@@ -43,13 +43,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [_QWERTY] = LAYOUT(
   //,----+----+----+----+----+----+----.                                                         ,----+----+----+----+----+----+----.
-     LT(_NAV, DE_CIRC) , DE_1  , DE_2  , DE_3  , DE_4  , DE_5  , KC_PSCR,                           KC_SLCK, DE_6  , DE_7  , DE_8  , DE_9  , DE_0  ,LT(_NAV, DE_SS),
+     LT(_NAV, DE_CIRC) , DE_1  , DE_2  , DE_3  , DE_4  , DE_5  , KC_PSCR,                           TO(_QWERTY), DE_6  , DE_7  , DE_8  , DE_9  , DE_0  ,LT(_NAV, DE_SS),
   //|----+----+----+----+----+----+----|                                                         |----+----+----+----+----+----+----|
      KC_ESC , DE_Q  , DE_W  , DE_E  , DE_R  , DE_T  , KC_ESC,                                       DE_SLSH, DE_Z  , DE_U  , DE_I  , DE_O  , DE_P  , DE_UE,
   //|----+----+----+----+----+----+----|                                                         |----+----+----+----+----+----+----|
      KC_TAB , DE_A  , DE_S  , DE_D  , DE_F  , DE_G  , LT(_NAV, KC_PGDN),                            TT(_NAV) , DE_H  , DE_J  , DE_K  , DE_L  , DE_OE , DE_AE,
   //|----+----+----+----+----+----+----|                                                         |----+----+----+----+----+----+----|
-     TD(SC_O),  DE_Y  , DE_X  , DE_C  , DE_V  , DE_B  ,LT(_SYMB, KC_PGUP),                          TT(_SYMB) , DE_N  , DE_M  , DE_COMM, DE_DOT , DE_MINS , TD(SC_C),
+     TD(SC_O),  DE_Y  , DE_X  , DE_C  , DE_V  , DE_B  ,LT(_SYMB, KC_PGUP),                          OSL(_SYMB) , DE_N  , DE_M  , DE_COMM, DE_DOT , DE_MINS , TD(SC_C),
   //|----+----+----+----+----+----+----|                                                         |----+----+----+----+----+----+----|
      KC_LGUI , DE_LESS , DE_HASH , LGUI_T(DE_PLUS), LALT_T(KC_BSPC), KC_SPC , LCTL_T(KC_ENT) ,      RCTL_T(KC_ENT) , KC_SPC, ALGR_T(KC_DEL) , KC_LEFT, KC_DOWN, KC_UP , KC_RGHT
   //`----+----+----+----+----+----+----'                                                         `----+----+----+----+----+----+----'

@@ -44,4 +44,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LSPO_KEY KC_8
 #define RSPC_KEY KC_9
 
-
+#define ONESHOT_TAP_TOGGLE 2
+#define ONESHOT_TIMEOUT 1500
