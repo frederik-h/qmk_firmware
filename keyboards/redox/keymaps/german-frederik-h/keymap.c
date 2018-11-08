@@ -85,17 +85,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------|      |------+------+------+------+------+------+------|
  * |      |MOUS_L|MOUS_D|MOUS_R|WHEL_D|      |      |      |      | LEFT | DOWN |  UP  |RIGHT |      |      |
  * |------+------+------+------+------+------+------|      |------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |Shift |      |      |      |      |      |      |      |      |      |      |      |      |      |Shift |
  * |------+------+------+------+------+------+------|      |------+------+------+------+------+------+------|
- * |      |      |      |      |MOUS_1|MOUS_2|      |      |      |      |      | Home | PgDn | PgUp | End  |
+ * |MS_A1 |MS_A1 |MS_A2 |      |      |MOUS_1|MOUS_2|      |      |      |      | Home | PgDn | PgUp | End  |
  * `------------------------------------------------'      `------------------------------------------------'
  */
   [_NAV] = LAYOUT(
     _______, _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______, _______,
     XXXXXXX, XXXXXXX, KC_MS_U, XXXXXXX, KC_WH_U, XXXXXXX, _______,                            _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END, XXXXXXX, XXXXXXX,
     XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, XXXXXXX, _______,                            _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT,XXXXXXX, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,                            _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN1, KC_BTN2, _______,                            _______, _______, XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,                            _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+    KC_MS_ACCEL0, KC_MS_ACCEL1, KC_MS_ACCEL2, XXXXXXX, KC_BTN1, KC_BTN2, _______,             _______, _______, XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END
   )
 };
 
