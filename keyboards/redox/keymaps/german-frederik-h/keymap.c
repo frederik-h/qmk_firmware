@@ -11,6 +11,7 @@ extern keymap_config_t keymap_config;
 #define _QWERTY 0
 #define _SYMB 1
 #define _NAV 2
+#define _NUM 3
 
 #define DEBUG 1
 
@@ -51,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----+----|                                                         |----+----+----+----+----+----+----|
      TD(SC_O),  DE_Y  , DE_X  , DE_C  , DE_V  , DE_B  , OSL(_SYMB),                          OSL(_SYMB) , DE_N  , DE_M  , DE_COMM, DE_DOT , DE_MINS , TD(SC_C),
   //|----+----+----+----+----+----+----|                                                         |----+----+----+----+----+----+----|
-     KC_LGUI , DE_LESS , DE_HASH , LGUI_T(DE_PLUS), LALT_T(KC_BSPC), KC_SPC , LCTL_T(KC_ENT) ,      RCTL_T(KC_ENT) , KC_SPC, ALGR_T(KC_DEL) , KC_LEFT, KC_DOWN, KC_UP , KC_RGHT
+     KC_LGUI , TT(_NUM) , DE_LESS , LGUI_T(DE_PLUS), LALT_T(KC_BSPC), KC_SPC , LCTL_T(KC_ENT) ,      RCTL_T(KC_ENT) , KC_SPC, ALGR_T(KC_DEL) , KC_LEFT, KC_DOWN, KC_UP , KC_RGHT
   //`----+----+----+----+----+----+----'                                                         `----+----+----+----+----+----+----'
   ),
 
@@ -96,7 +97,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, XXXXXXX, _______,                            _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT,XXXXXXX, XXXXXXX,
     _______, KC_MS_ACCEL0, KC_MS_ACCEL1, KC_MS_ACCEL2, XXXXXXX, XXXXXXX, _______,             _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______,                            _______, _______, XXXXXXX, KC_BTN1, KC_BTN3, KC_BTN2, XXXXXXX
-  )
+  ),
+
+/* Numbers
+ * ,------------------------------------------------.      ,------------------------------------------------.
+ * |      |  F1  |  F2  |  F3  |  F4  |  F5  |      |      |      |  F6  |  F7  |  F8  |  F9  | F10  | F11  |
+ * |------+------+------+------+------+------+------|      |------+------+------+------+------+------+------|
+ * |      |   !  |   ?  |   {  |   }  |   |  |      |      |      |  0   |   1  |   2  |   3  |      | F12  |
+ * |------+------+------+------+------+------+------|      |------+------+------+------+------+------+------|
+ * |      |   #  |   $  |   [  |   ]  |   ~  |      |      |      |   +  |   4  |   5  |   6  |      |      |
+ * |------+------+------+------+------+------+------|      |------+------+------+------+------+------+------|
+ * | Shift|   %  |   ^  |   (  |   )  |   ´  |      |      |      |   .  |   7  |   8  |   9  |      |Shift |
+ * |------+------+------+------+------+------+------|      |------+------+------+------+------+------+------|
+ * |      |      |      | Alt  | Ctrl |      |      |      |      |      |      |      |   .  |      |      |
+ * `------------------------------------------------'      `------------------------------------------------'
+ */
+
+  [_NUM] = LAYOUT(
+    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5  , _______,                             _______, KC_F6  ,  KC_F7  , KC_F8  , KC_F9  , KC_F10 ,  KC_F11,
+    _______, DE_EXLM, DE_QST , DE_LCBR, DE_RCBR, DE_PIPE, DE_HASH,                             DE_BSLS, DE_0   ,  DE_1   , DE_2   , DE_3   , XXXXXXX, KC_F12,
+    _______, DE_HASH, DE_DLR , DE_LBRC, DE_RBRC, DE_TILD, _______,                             _______, DE_PLUS,  DE_4   , DE_5   , DE_6   , XXXXXXX, XXXXXXX,
+    KC_LSFT, DE_PERC, DE_CIRC, DE_LPRN, DE_RPRN, DE_ACUT, _______,                             _______, DE_DOT ,  DE_7   , DE_8   , DE_9   , XXXXXXX, KC_RSFT,
+    _______, _______, _______, _______, _______, _______, _______,                             _______, _______,  _______, _______, _______, _______, _______
+  ),
+
+
 };
 
 #ifdef AUDIO_ENABLE
