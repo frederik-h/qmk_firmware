@@ -115,12 +115,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NUM] = LAYOUT(
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5  , _______,                             _______, KC_F6  ,  KC_F7  , KC_F8  , KC_F9  , KC_F10 ,  KC_F11,
-    _______, DE_EXLM, DE_QST , DE_LCBR, DE_RCBR, DE_PIPE, DE_HASH,                             DE_BSLS, DE_0   ,  DE_1   , DE_2   , DE_3   , XXXXXXX, KC_F12,
-    _______, DE_HASH, DE_DLR , DE_LBRC, DE_RBRC, DE_TILD, _______,                             _______, DE_PLUS,  DE_4   , DE_5   , DE_6   , XXXXXXX, XXXXXXX,
-    KC_LSFT, DE_PERC, DE_CIRC, DE_LPRN, DE_RPRN, DE_ACUT, _______,                             _______, DE_DOT ,  DE_7   , DE_8   , DE_9   , XXXXXXX, KC_RSFT,
+    _______, DE_EXLM, DE_QST , DE_LCBR, DE_RCBR, DE_PIPE, DE_HASH,                             _______, DE_7   ,  DE_8   , DE_9   , DE_0   , DE_LESS, DE_MORE,
+    _______, DE_HASH, DE_DLR , DE_LBRC, DE_RBRC, DE_TILD, _______,                             _______, DE_4   ,  DE_5   , DE_6   , DE_PLUS, DE_ASTR, XXXXXXX,
+    KC_LSFT, DE_PERC, DE_CIRC, DE_LPRN, DE_RPRN, DE_ACUT, _______,                             _______, DE_1   ,  DE_2   , DE_3   , _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,                             _______, _______,  _______, _______, _______, _______, _______
-  ),
-
+  )
 
 };
 
