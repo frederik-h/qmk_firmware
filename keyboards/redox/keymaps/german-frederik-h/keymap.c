@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
      TD(SC_O),  DE_Y  , DE_X  , DE_C  , DE_V  , DE_B  , OSL(_SYMB),                                            LT(_SYMB, KC_SPC) , DE_N  , DE_M  , DE_COMM, DE_DOT , DE_MINS , TD(SC_C),
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
-     KC_LGUI , OSL(_NUM) , TT(_MOUSE), TTSPEC, LALT_T(KC_BSPC), MT(MOD_LSFT, KC_SPC), RCTL_T(KC_ENT) ,  RCTL_T(KC_ENT) , MT(MOD_RSFT, KC_SPC), LALT_T(KC_DEL) , KC_LEFT, KC_DOWN, KC_TAB , KC_RGHT
+     KC_LGUI , OSL(_NUM) , TT(_MOUSE), TTSPEC, LALT_T(KC_BSPC), MT(MOD_LSFT, KC_SPC), LT(_NAV, KC_ENT) ,  RCTL_T(KC_ENT) , MT(MOD_RSFT, KC_SPC), LALT_T(KC_DEL) , KC_LEFT, KC_DOWN, KC_TAB , KC_RGHT
   //`----+----+----+----+----+----+----'                                                                      `----+----+----+----+----+----+----'
   ),
 
