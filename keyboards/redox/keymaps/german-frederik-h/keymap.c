@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
      TO(_QWERTY) , DE_Q  , DE_W  , DE_E  , DE_R  , DE_T  , LTN(KC_ESC),                                        DE_SLSH, DE_Z  , DE_U  , DE_I  , DE_O  , DE_P  , DE_UE,
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
-     LTM(KC_TAB) , DE_A  , DE_S  , DE_D  , DE_F  , DE_G  , OSL(_NAV),                                          LT(_NAV, KC_ENT) , DE_H  , DE_J  , DE_K  , DE_L  , KC_ESC , DE_AE,
+     LTM(KC_TAB) , DE_A  , DE_S  , DE_D  , DE_F  , DE_G  , OSL(_NAV),                                          LT(_NAV, KC_ENT) , DE_H  , DE_J  , DE_K  , DE_L  , KC_ESC , TT(_SYMB),
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
      TD(SC_O),  DE_Y  , DE_X  , DE_C  , DE_V  , DE_B  , OSL(_SYMB),                                            LT(_SYMB, KC_SPC) , DE_N  , DE_M  , DE_COMM, DE_DOT , DE_MINS , TD(SC_C),
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
@@ -99,11 +99,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `------------------------------------------------'      `------------------------------------------------'
  */
   [_NAV] = LAYOUT(
-    _______, _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______, _______,
-    TO(_QWERTY), XXXXXXX, KC_MS_U, XXXXXXX, KC_WH_U, XXXXXXX, _______,                        KC_LGUI, KC_HOME, KC_PGDN, KC_PGUP, KC_END , XXXXXXX, KC_PSCR,
-    XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, RALT(KC_TAB), _______,                       _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT, LGUI(KC_UP), XXXXXXX,
-    _______, KC_MS_ACCEL0, KC_MS_ACCEL1, KC_MS_ACCEL2, LALT(LSFT(KC_TAB)), LALT(KC_TAB), KC_HOME, KC_END, LCG(KC_LEFT), LAG(KC_LEFT), LAG(KC_RGHT), LCG(KC_RGHT), LGUI(KC_DOWN), XXXXXXX,
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______,                            _______, _______, XXXXXXX, KC_BTN1, KC_BTN3, KC_BTN2, _______
+    _______, _______, _______, _______, _______, _______, _______, 			       _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______,  			       KC_LGUI, KC_HOME, KC_PGDN, KC_PGUP, KC_END , XXXXXXX, KC_PSCR,
+    _______, _______, _______, _______, _______, _______, _______,                             _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT, LGUI(KC_UP), _______, 
+    _______, _______, _______, _______, _______, _______, _______, 			       _______, LCG(KC_LEFT), LAG(KC_LEFT), LAG(KC_RGHT), LCG(KC_RGHT), LGUI(KC_DOWN), _______, 
+    _______, _______, _______, _______, _______, _______, _______,                             _______, _______, _______, _______, _______, _______, _______  
   ),
 
 /* Numbers
