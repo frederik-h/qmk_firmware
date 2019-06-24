@@ -22,9 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL
 
 #ifndef LEFT_SIDE
-#define MASTER_RIGHT
-#else
 #define MASTER_LEFT
+#else
+#define MASTER_RIGHT
 #endif
 
 //#define EE_HANDS
