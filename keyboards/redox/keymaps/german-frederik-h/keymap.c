@@ -49,17 +49,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `---------------------------------------------------'            `----------------------------------------------------'
  */
   [_QWERTY] = LAYOUT(
-  //,----+----+----+----+----+----+----.                                                                      ,----+----+----+----+----+----+----.
      RESET       , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 , KC_F11,                                             KC_F12 , KC_F6 , KC_F7 , KC_F8 ,  KC_F9, KC_F10, KC_INS,
-  //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
      TO(_MOUSE) , DE_Q  , DE_W  , DE_E  , DE_R  , DE_T  , LTN(KC_ESC),                                        DE_SLSH, DE_Z  , DE_U  , DE_I  , DE_O  , DE_P  , DE_UE,
-  //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
      LTM(KC_TAB) , DE_A  , DE_S  , DE_D  , DE_F  , DE_G  , OSL(_NAV),                                          LT(_NAV, KC_ENT) , DE_H  , DE_J  , DE_K  , DE_L  , KC_ESC , TT(_SYMB),
-  //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
      TD(SC_O),  DE_Y  , DE_X  , DE_C  , DE_V  , DE_B  , OSL(_SYMB),                                            LT(_SYMB, KC_DEL) , DE_N  , DE_M  , DE_COMM, DE_DOT , DE_MINS , TD(SC_C),
-  //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
      KC_LGUI , OSL(_NUM) , TT(_MOUSE), TTSPEC, LT(_NAV, KC_BSPC), LALT_T(KC_ENT),  MT(MOD_LSFT, KC_SPC),  RCTL_T(KC_ENT) , MT(MOD_RSFT, KC_SPC), LT(_SYMB, KC_DEL) , KC_LEFT, KC_DOWN, KC_TAB , KC_RGHT
-  //`----+----+----+----+----+----+----'                                                                      `----+----+----+----+----+----+----'
   ),
 
 /* Symbols
