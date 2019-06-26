@@ -52,13 +52,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,----+----+----+----+----+----+----.                                                                      ,----+----+----+----+----+----+----.
      RESET       , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 , KC_F11,                                             KC_F12 , KC_F6 , KC_F7 , KC_F8 ,  KC_F9, KC_F10, KC_INS,
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
-     TO(_QWERTY) , DE_Q  , DE_W  , DE_E  , DE_R  , DE_T  , LTN(KC_ESC),                                        DE_SLSH, DE_Z  , DE_U  , DE_I  , DE_O  , DE_P  , DE_UE,
+     TO(_MOUSE) , DE_Q  , DE_W  , DE_E  , DE_R  , DE_T  , LTN(KC_ESC),                                        DE_SLSH, DE_Z  , DE_U  , DE_I  , DE_O  , DE_P  , DE_UE,
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
      LTM(KC_TAB) , DE_A  , DE_S  , DE_D  , DE_F  , DE_G  , OSL(_NAV),                                          LT(_NAV, KC_ENT) , DE_H  , DE_J  , DE_K  , DE_L  , KC_ESC , TT(_SYMB),
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
-     TD(SC_O),  DE_Y  , DE_X  , DE_C  , DE_V  , DE_B  , OSL(_SYMB),                                            LT(_SYMB, KC_SPC) , DE_N  , DE_M  , DE_COMM, DE_DOT , DE_MINS , TD(SC_C),
+     TD(SC_O),  DE_Y  , DE_X  , DE_C  , DE_V  , DE_B  , OSL(_SYMB),                                            LT(_SYMB, KC_DEL) , DE_N  , DE_M  , DE_COMM, DE_DOT , DE_MINS , TD(SC_C),
   //|----+----+----+----+----+----+----|                                                                      |----+----+----+----+----+----+----|
-     KC_LGUI , OSL(_NUM) , TT(_MOUSE), TTSPEC, LALT_T(KC_BSPC), MT(MOD_LSFT, KC_SPC), LT(_NAV, KC_ENT) ,  RCTL_T(KC_ENT) , MT(MOD_RSFT, KC_SPC), LALT_T(KC_DEL) , KC_LEFT, KC_DOWN, KC_TAB , KC_RGHT
+     KC_LGUI , OSL(_NUM) , TT(_MOUSE), TTSPEC, LT(_NAV, KC_BSPC), LALT_T(KC_ENT),  MT(MOD_LSFT, KC_SPC),  RCTL_T(KC_ENT) , MT(MOD_RSFT, KC_SPC), LT(_SYMB, KC_DEL) , KC_LEFT, KC_DOWN, KC_TAB , KC_RGHT
   //`----+----+----+----+----+----+----'                                                                      `----+----+----+----+----+----+----'
   ),
 
@@ -77,10 +77,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
   [_SYMB] = LAYOUT(
-    _______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , _______,                            _______, KC_F6  ,  KC_F7  , KC_F8  , KC_F9  , KC_F10 ,  KC_F11,
-    _______, DE_AT  , DE_DQOT, DE_LCBR, DE_RCBR, DE_QUOT, DE_HASH,                            DE_BSLS, DE_EXLM,  DE_QST ,  DE_SLSH, DE_BSLS, XXXXXXX, KC_F12,
-    _______, DE_CIRC, DE_DLR , DE_LPRN, DE_RPRN, DE_TILD, _______,                            _______, DE_AMPR,  DE_EQL , DE_PLUS, DE_ASTR, XXXXXXX, XXXXXXX,
-    KC_LSFT, DE_HASH, DE_PERC, DE_LBRC, DE_RBRC, DE_ACUT, _______,                            _______, DE_LESS,  DE_MORE, DE_AMPR, DE_PIPE, XXXXXXX, KC_RSFT,
+    _______, _______, _______, _______, _______, _______, _______,                            _______, _______,  _______, _______, _______, _______, _______,
+    _______, DE_AT  , DE_DQOT, DE_LCBR, DE_RCBR, DE_QUOT, DE_HASH,                            DE_BSLS, DE_EXLM,  DE_QST , DE_SLSH, DE_BSLS, XXXXXXX, _______,
+    _______, DE_CIRC, DE_DLR , DE_LPRN, DE_RPRN, DE_TILD, _______,                            _______, DE_LESS,  DE_EQL , DE_PLUS, DE_ASTR, DE_HASH, XXXXXXX,
+    KC_LSFT, DE_HASH, DE_PERC, DE_LBRC, DE_RBRC, DE_ACUT, _______,                            _______, DE_MORE,  DE_AMPR, DE_PIPE, DE_COLN, DE_UNDS, KC_RSFT,
     _______, _______, _______, _______, _______, _______, _______,                            _______, _______,  _______, _______, _______, _______, _______
   ),
 
@@ -99,11 +99,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `------------------------------------------------'      `------------------------------------------------'
  */
   [_NAV] = LAYOUT(
-    _______, _______, _______, _______, _______, _______, _______, 			       _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______,  			       KC_LGUI, KC_HOME, KC_PGDN, KC_PGUP, KC_END , XXXXXXX, KC_PSCR,
-    _______, _______, _______, _______, _______, _______, _______,                             _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT, LGUI(KC_UP), _______, 
-    _______, _______, _______, _______, _______, _______, _______, 			       _______, LCG(KC_LEFT), LAG(KC_LEFT), LAG(KC_RGHT), LCG(KC_RGHT), LGUI(KC_DOWN), _______, 
-    _______, _______, _______, _______, _______, _______, _______,                             _______, _______, _______, _______, _______, _______, _______  
+    _______, _______, _______, _______ , _______, _______, _______, 			       _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, DE_7   ,  DE_8   , DE_9   , _______, _______,  			       KC_LGUI, KC_HOME, KC_PGDN, KC_PGUP, KC_END , XXXXXXX, KC_PSCR,
+    _______, _______, DE_4   ,  DE_5   , DE_6   , _______, _______,                            _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RIGHT, LGUI(KC_UP), _______, 
+    _______, _______, DE_1   ,  DE_2   , DE_3   , _______, _______, 			       _______, LCG(KC_LEFT), LAG(KC_LEFT), LAG(KC_RGHT), LCG(KC_RGHT), LGUI(KC_DOWN), _______, 
+    _______, _______, _______,  DE_0   , _______, _______, _______,                            _______, _______, _______, _______, _______, _______, _______  
   ),
 
 /* Numbers
@@ -121,19 +121,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
   [_NUM] = LAYOUT(
-    _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5  , _______,                             _______, KC_F6  ,  KC_F7  , KC_F8  , KC_F9  , KC_F10 ,  KC_F11,
+    _______, _______, _______, _______, _______, _______, _______,                             _______, _______,  _______, _______, _______, _______, _______,
     _______, DE_EXLM, DE_QST , DE_LCBR, DE_RCBR, DE_PIPE, DE_HASH,                             _______, DE_7   ,  DE_8   , DE_9   , _______, DE_LESS, DE_MORE,
-    _______, DE_AE, DE_SS , DE_LBRC, DE_RBRC, DE_TILD, _______,                             _______, DE_4   ,  DE_5   , DE_6   , DE_PLUS, DE_ASTR, XXXXXXX,
+    _______, DE_AE  , DE_SS  , DE_LBRC, DE_RBRC, DE_TILD, _______,                             _______, DE_4   ,  DE_5   , DE_6   , DE_PLUS, DE_ASTR, XXXXXXX,
     KC_LSFT, DE_PERC, DE_CIRC, DE_LPRN, DE_RPRN, DE_ACUT, _______,                             _______, DE_1   ,  DE_2   , DE_3   , DE_0   , _______, _______,
     _______, _______, _______, _______, _______, _______, _______,                             _______, _______,  _______, _______, _______, _______, _______
   ),
 
   [_MOUSE] = LAYOUT(
-    _______, _______, _______, _______, _______, _______, _______,                             _______, _______, _______, _______, _______, _______, _______,  
-    _______, _______, _______, _______, _______, _______, _______,                             _______, _______, KC_WH_D, KC_WH_U, _______, _______, _______,  
-    _______, _______, _______, _______, _______, _______, _______,                             _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,  
-    _______, _______, _______, _______, _______, _______, _______,                             _______, _______, _______, _______, _______, _______, _______,  
-    _______, _______, _______, _______, _______, _______, _______,                             KC_BTN1, KC_BTN3, KC_BTN2, _______, _______, _______, _______  
+    _______, _______, _______, _______,  _______,  _______, _______,                             _______, _______, _______, _______, _______, _______, _______,  
+    TO(_QWERTY), _______, _______, _______,  _______,  _______, _______,                             _______, _______, KC_WH_D, KC_WH_U, _______, _______, _______,  
+    _______, _______, _______, _______,  _______,  _______, _______,                             _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,  
+    _______, _______, _______, _______,  _______,  _______, _______,                             _______, _______, _______, _______, _______, _______, _______,  
+    _______, _______, _______, _______,  _______,  _______, _______,                             KC_BTN1, KC_BTN3, KC_BTN2, _______, _______, _______, _______  
   ),
 
   [_SPECIAL] = LAYOUT(
