@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_4x6(
      MOUS_TAB, DE_Q  , DE_W  , DE_E  , DE_R  , DE_T ,                         DE_Z  , DE_U  , DE_I    ,  DE_O   , DE_P    , XXXXXXX,
      DE_A    , DE_A  , DE_S  , DE_D  , DE_F  , DE_G ,                         DE_H  , DE_J  , DE_K    ,  DE_L   , KC_ESC  , XXXXXXX,
-     KC_LSFT , DE_Y  , DE_X  , DE_C  , DE_V  , DE_B ,                         DE_N  , DE_M  , DE_COMM ,  DE_DOT , DE_MINS , MOUS_TAB,
+     KC_LSFT , DE_Y  , DE_X  , DE_C  , DE_V  , DE_B ,                         DE_N  , DE_M  , DE_COMM ,  DE_DOT , DE_MINS , KC_RSFT,
                        DE_LESS , DE_MORE,                                                     DE_SLSH ,  DE_BSLS,
                                       NAV_BSPC, ALT_ENT,                     SFT_SPC, SYMB_DEL, 
                                         NUM_TAB, KC_SPC,                 CTL_ENT,  KC_DEL,
